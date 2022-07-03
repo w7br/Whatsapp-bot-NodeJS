@@ -30,4 +30,4 @@ function execute(user, msg, contato) {
     ];
 }
 
-exports.execute = execute;
+module.exports.execute = execute;

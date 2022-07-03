@@ -4,19 +4,29 @@ const bot = require("venom-bot");
 const { db } = require("../src/models/banco");
 const { step } = require("../src/models/stages");
 
-bot.create().then((client) => start(client));
+bot.create().then((client) => start(client)).catch((erro)=> erro);
 
 function start(client) {
+    try{
+        return step[5].obj.execute("aleks", "vai que vc consegue!");
+    }
+    catch(erro){
+        console.log("Erro: ", erro)
+    }
+    
     client.onMessage((message) => {
         let resp = step[getStage(message.from)].obj.execute(
             message.from,
             message.body,
             message.sender.name
         );
+        resp.map(element => { client.sendText(message.from, element) });
+        /*
         for (let index = 0; index < resp.length; index++) {
             const element = resp[index];
             client.sendText(message.from, element);
         }
+        */
     });
 }
 

@@ -10,6 +10,7 @@ function execute(user, msg) {
     if (msg === "#") {
         db[user].stage = 5;
 
+        //step[5].obj.execute("aleks", "vai que vc consegue!");
         return step[5].obj.execute(user, "");
     }
     return [
@@ -18,4 +19,4 @@ function execute(user, msg) {
     ];
 }
 
-exports.execute = execute;
+module.exports.execute = execute;

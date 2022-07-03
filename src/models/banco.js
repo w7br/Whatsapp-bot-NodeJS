@@ -1,3 +1,3 @@
 var banco = {};
 
-exports.db = banco;
+module.exports.db = banco;

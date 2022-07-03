@@ -17,7 +17,8 @@ function execute(user, msg) {
     if (msg === "3") {
         return ["Chave do PIX aqui 000.000.000-00"]
     }
+    console.log("de dentro do stage 5")
     return ["Escolha a forma de pagamento:\n1️⃣-Dinheiro\n2️⃣-Cartão\n3️⃣-PIX"];
 }
 
-exports.execute = execute;
+module.exports.execute = execute;

@@ -25,4 +25,4 @@ var stages = {
     },
 };
 
-exports.step = stages;
+module.exports.step = stages;

@@ -27,4 +27,4 @@ function execute(user, msg) {
     ];
 }
 
-exports.execute = execute;
+module.exports.execute = execute;
