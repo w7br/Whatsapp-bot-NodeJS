@@ -8,7 +8,7 @@ bot.create().then((client) => start(client)).catch((erro)=> erro);
 
 function start(client) {
     try{
-        return step[5].obj.execute("aleks", "vai que vc consegue!");
+        return step[5].obj.execute("Usuário", "rodando desde o início");
     }
     catch(erro){
         console.log("Erro: ", erro)
